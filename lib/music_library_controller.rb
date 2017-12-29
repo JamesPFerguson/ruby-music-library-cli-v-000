@@ -40,7 +40,10 @@ attr_accessor :path
 
 
   def list_songs
-    Song.all.sort {|a, b| a.name <=> b.name}.each_with_index {|song, i| puts "#{i + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
+    Song.all.sort {|a, b| a.name <=> b.name}.each {|song|
+       i = 1
+       puts "#{i}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+       i += 1 }
   end
 
   def list_artists
