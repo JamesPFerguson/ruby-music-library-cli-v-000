@@ -86,7 +86,7 @@ attr_accessor :path
       puts "Which song number would you like to play?"
       input = gets.strip
       number = input.to_i
-      if number <= Song.all.length + 1
+      if number <= Song.all.length
         song = Song.all.sort{ |a, b| a.name <=> b.name }[number - 1]
       end
 
