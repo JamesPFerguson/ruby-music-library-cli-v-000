@@ -79,6 +79,7 @@ attr_accessor :path
         Genre.songs.sort{|a, b| a.name <=> b.name}.each_with_index {|song, index|
           puts "#{index + 1}. #{song.name} - #{song.artist}"
         }
+      end
     end
 
     def play_song
