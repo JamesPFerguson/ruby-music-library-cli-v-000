@@ -60,7 +60,7 @@ attr_accessor :path
           i += 1 }
     end
 
-    def list_artist
+    def list_songs_by_artist
     end
 
     def list_genre
