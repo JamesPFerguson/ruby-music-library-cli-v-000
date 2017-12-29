@@ -85,8 +85,9 @@ attr_accessor :path
     def play_song
       puts "Which song number would you like to play?"
       input = gets.strip
-      if input <= Song.all.length + 1
-        puts "Now playing #{Song.all.sort{|a, b| a.name <=> b.name}[input]}"
+      number = input.to_i
+      if input.to_i <= Song.all.length + 1
+        puts "Now playing #{Song.all.sort{|a, b| a.name <=> b.name}[number]}"
     end
   end
 
