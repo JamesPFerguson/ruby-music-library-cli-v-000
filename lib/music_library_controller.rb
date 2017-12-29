@@ -63,7 +63,7 @@ attr_accessor :path
     def list_songs_by_artist
         puts "Please enter the name of an artist:"
         input = gets.strip
-        Artist.all.find(|artist| artist.name == input).songs.sort {|a, b| a.name <=> b.name}.each_with_index {|song, index|
+        Artist.all.find{|artist| artist.name == input}.songs.sort {|a, b| a.name <=> b.name}.each_with_index {|song, index|
           puts "#{index + 1}. #{song}"
         }
 
