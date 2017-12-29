@@ -54,6 +54,10 @@ attr_accessor :path
     end
 
     def list_genres
+      i = 1
+      Genre.all.sort {|a, b| a.name <=> b.name}.each {|genre|
+        puts "#{i}. #{genre.name}"
+          i += 1 }
     end
 
     def list_artist
