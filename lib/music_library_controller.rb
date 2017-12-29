@@ -88,6 +88,10 @@ attr_accessor :path
       number = input.to_i
       if number <= Song.all.length + 1
         song = Song.all.sort{|a, b| a.name <=> b.name}
+      end
+
+      if song
+        puts "Playing #{song.name} by #{song.artist.name}"    
     end
   end
 
