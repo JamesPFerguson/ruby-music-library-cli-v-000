@@ -77,7 +77,7 @@ attr_accessor :path
 
       if genre = Genre.find_by_name(input)
         Genre.songs.sort{|a, b| a.name <=> b.name}.each_with_index {|song, index|
-          puts "#{index + 1}. #{song.name} - #{song.artist}"
+          puts "#{index + 1}. #{song.name} - #{artist.name}"
         }
       end
     end
