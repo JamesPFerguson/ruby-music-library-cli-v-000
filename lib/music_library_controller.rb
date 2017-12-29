@@ -87,7 +87,7 @@ attr_accessor :path
       input = gets.strip
       number = input.to_i
       if number <= Song.all.length + 1
-        song = Song.all.sort{ |a, b| a.name <=> b.name }[input - 1]
+        song = Song.all.sort{ |a, b| a.name <=> b.name }[number - 1]
       end
 
       if song
