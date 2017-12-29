@@ -87,7 +87,7 @@ attr_accessor :path
       input = gets.strip
       number = input.to_i
       if number <= Song.all.length + 1
-        puts "Now playing #{Song.all.sort{|a, b| a.name <=> b.name}[number].name}"
+        song = Song.all.sort{|a, b| a.name <=> b.name}
     end
   end
 
