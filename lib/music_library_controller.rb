@@ -88,6 +88,6 @@ attr_accessor :path
       if input <= Song.all.length + 1
         puts "Now playing #{Song.all.sort{|a, b| a.name <=> b.name}[input]}"
     end
-
+  end
 
 end
