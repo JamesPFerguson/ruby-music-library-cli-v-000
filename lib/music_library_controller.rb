@@ -65,7 +65,6 @@ attr_accessor :path
         input = gets.strip
         Artist.all.find(|artist| artist.name == input).songs.sort {|a, b| a.name <=> b.name}.each_with_index {|song, index|
           puts "#{index + 1}. #{song}"
-
         }
 
     end
